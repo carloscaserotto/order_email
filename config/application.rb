@@ -19,4 +19,7 @@ module OrderEmail
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
+
+  # config/application.rb
+  config.assets.initialize_on_precompile = false
 end
