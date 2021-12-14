@@ -1,0 +1,15 @@
+<% @orders.each do |order| %>
+    <ul>
+    <li> Name: <%= order.name %> </li>
+    <li> Email: <%= order.email %> </li>
+    <li> Address: <%= order.name %> </li>
+    <li> Phone: <%= order.phone %> </li>
+    <li> Message: <%= order.message %> </li>
+    <li><%= link_to 'View', order_path(order)%> | 
+        <%= link_to 'Edit', edit_order_path(order)%> |
+        <%= link_to 'Delete', order_path(order), method: :delete %> </li>
+    </ul>
+<% end %>
+<%= link_to 'New Order', new_order_path %>
+<%= link_to 'Home', root_path %>
+

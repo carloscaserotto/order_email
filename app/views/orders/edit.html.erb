@@ -1,0 +1,27 @@
+<h1>Edit an order</h1>
+  
+  <%= form_with(model: @order, local: true)  do |f| %>
+    <p> 
+    <%= f.label :name %><br/> 
+    <%= f.text_field :name %>
+  </p>
+  <p> 
+    <%= f.label :email %><br/> 
+    <%= f.email_field :email %>
+  </p>
+  <p> 
+    <%= f.label :address %><br/> 
+    <%= f.text_field :address %>
+  </p>
+  <p> 
+    <%= f.label :phone %><br/> 
+    <%= f.text_field :phone %>
+  </p>    
+  <p>
+    <%= f.label :message %><br/> 
+    <%= f.text_area :message %> 
+  </p>
+  <p>
+    <%= f.submit %> 
+  </p>
+  <% end %>

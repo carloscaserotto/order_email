@@ -1,0 +1,18 @@
+Welcome Home Page
+
+<h2> Place an order: <%= link_to 'Place an order', new_order_path %></h2>
+
+<h2> View orders: <%= link_to 'Orders', orders_path %></h2>
+<h2> View users: <%= link_to 'Users', users_path %></h2>
+
+<% if Current.user %>
+Logged in as: <%= Current.user.email %><br>
+<%= link_to 'Edit Password', edit_password_path %>
+<%= button_to 'Logout', logout_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign Up', sign_up_path %>
+or
+<%= link_to 'Login', sign_in_path %>
+<% end %>
+
+

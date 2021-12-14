@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+    <ul>
+    <li> Email: <%= user.email %> </li>
+    
+    <li><%= link_to 'View', user_path(user)%> | 
+        <%= link_to 'Edit', edit_user_path(user)%> |
+        <%= link_to 'Delete', user_path(user), method: :delete %> </li>
+    </ul>
+<% end %>
+<%= link_to 'New Order', new_order_path %>
+<%= link_to 'Home', root_path %>
